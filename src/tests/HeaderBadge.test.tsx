@@ -9,7 +9,8 @@ function SeedCart() {
   React.useEffect(() => {
     addToCart({ id: 1, title: "Seed", price: 1, image: "" });
     addToCart({ id: 1, title: "Seed", price: 1, image: "" });
-  }, [addToCart]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); 
   return null;
 }
 
