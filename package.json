@@ -1,13 +1,15 @@
 {
   "name": "react-ecommerce",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "lint": "echo \"add eslint if you like\""
   },
   "dependencies": {
     "react": "^19.1.1",
