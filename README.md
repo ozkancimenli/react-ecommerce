@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# React E-Commerce (CI/CD + TDD)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal e-commerce React app demonstrating **Test-Driven Development (TDD)** and a **CI/CD pipeline** with GitHub Actions and Vercel.
 
-Currently, two official plugins are available:
+## ✨ Features
+- Product listing with images, price, and "Add to Cart"
+- Shopping cart with item count, remove, and clear functionality
+- Context API for state management
+- React Router for navigation
+- Fully automated pipeline: build → test → deploy
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧪 Testing
+- **Unit Tests**:  
+  - `ProductCard.test.tsx` → component rendering + button interaction  
+  - `HeaderBadge.test.tsx` → cart badge updates correctly
+- **Integration Test**:  
+  - `CartIntegration.test.tsx` → adding product updates the cart badge
+- Run locally:  
+  ```
+  npm test
+⚙️ CI/CD Pipeline
 
-## React Compiler
+- Continuous Integration (CI):
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+  - GitHub Actions build & test on every push to master
 
-## Expanding the ESLint configuration
+  - Pipeline fails if tests fail
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Continuous Deployment (CD):
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+  - Successful runs deploy automatically to Vercel
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# 🚀 Live Demo
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+👉 [View Live App](https://react-ecommerce-p5kfp0jua-ozkancimenlis-projects.vercel.app/)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# 📦 Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React + TypeScript + Vite
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- React Router
+
+- Context API
+
+- Vitest + React Testing Library
+
+- GitHub Actions
+
+- Vercel
+
+# 📌 Presentation Requirement
+
+This project will be presented live to demonstrate:
+
+- Features
+
+- Architecture
+
+- TDD setup
+
+- CI/CD pipeline
